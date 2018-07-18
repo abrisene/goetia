@@ -1,0 +1,197 @@
+{
+  "declaration": {
+    "attributes": {
+      "version": "1.0",
+      "encoding": "UTF-8"
+    },
+    "parent": "_"
+  },
+  "elements": [
+    {
+      "type": "comment",
+      "comment": " Created on: 2010-12-01T00:00:00+00:00 ",
+      "parent": "_"
+    },
+    {
+      "type": "comment",
+      "comment": " Written almost entirely by GPT ",
+      "parent": "_"
+    },
+    {
+      "type": "element",
+      "name": "tables",
+      "parent": "_",
+      "elements": [
+        {
+          "type": "element",
+          "name": "stats",
+          "parent": "_",
+          "elements": [
+            {
+              "type": "element",
+              "name": "stat-category",
+              "attributes": {
+                "id": "physical",
+                "name": "Fitness"
+              },
+              "parent": "_",
+              "elements": [
+                {
+                  "type": "element",
+                  "name": "abilities",
+                  "parent": "_",
+                  "elements": [
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Strength",
+                          "parent": "_"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Speed",
+                          "parent": "_"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Resistance",
+                          "parent": "_"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "stat-category",
+              "attributes": {
+                "id": "mental",
+                "name": "Intelligence"
+              },
+              "parent": "_",
+              "elements": [
+                {
+                  "type": "element",
+                  "name": "abilities",
+                  "parent": "_",
+                  "elements": [
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Read",
+                          "parent": "_"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Heal",
+                          "parent": "_"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Swim",
+                          "parent": "_"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "stat-category",
+              "attributes": {
+                "id": "social",
+                "name": "Charisma"
+              },
+              "parent": "_",
+              "elements": [
+                {
+                  "type": "element",
+                  "name": "abilities",
+                  "parent": "_",
+                  "elements": [
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Gossip",
+                          "parent": "_"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Intimidate",
+                          "parent": "_"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ability",
+                      "parent": "_",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Persuade",
+                          "parent": "_"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

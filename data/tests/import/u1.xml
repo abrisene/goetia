@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created on: 2010-12-01T00:00:00+00:00 -->
+<!-- Written almost entirely by GPT -->
+<tables>
+  <stats>
+    <stat-category id="physical" name="Fitness">
+      <abilities>
+        <ability>Strength</ability>
+        <ability>Speed</ability>
+        <ability>Resistance</ability>
+      </abilities>
+    </stat-category>
+    <stat-category id="mental" name="Intelligence">
+      <abilities>
+        <ability>Read</ability>
+        <ability>Heal</ability>
+        <ability>Swim</ability>
+      </abilities>
+    </stat-category>
+    <stat-category id="social" name="Charisma">
+      <abilities>
+        <ability>Gossip</ability>
+        <ability>Intimidate</ability>
+        <ability>Persuade</ability>
+      </abilities>
+    </stat-category>
+  </stats>
+</tables>
