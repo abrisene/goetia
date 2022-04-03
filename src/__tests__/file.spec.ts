@@ -16,7 +16,7 @@ import { makeDir, removeDir, importXML, exportXML, importJSON, exportJSON, exist
  # Constants
  */
 
-const TEST_DIR = join(__dirname, '../../data/tests/dir');
+const TEST_DIR = join(__dirname, '../../data/tests');
 const IMPORT_DIR = join(__dirname, '../../data/tests/import');
 const EXPORT_DIR = join(__dirname, '../../data/tests/export');
 
