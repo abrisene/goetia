@@ -1,6 +1,6 @@
 {
   "name": "goetia",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "Goetia is a tool for importing and exporting data from various filetypes.",
   "author": "David Robinson <dr@monetise.io> (http://www.monetise.io)",
   "homepage": "https://github.com/abrisene/goetia#readme",
