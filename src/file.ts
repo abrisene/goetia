@@ -7,7 +7,8 @@
  # Module Dependencies
  */
 
-import { existsSync, readFileSync, writeFileSync, PathLike } from 'fs';
+import { existsSync, readFileSync, writeFileSync, PathLike, mkdirSync, rmdirSync } from 'fs';
+import { join } from 'path';
 import * as XLSX from 'xlsx';
 import { xml2json, js2xml, Element, ElementCompact, Options } from 'xml-js';
 
@@ -52,7 +53,7 @@ const handlers = {
  # Functions
  */
 
-function getExtension(filename: string) {
+export function getExtension(filename: string) {
   return filename.split('.').pop();
 }
 
@@ -70,6 +71,32 @@ function jsonTryParse(data: string) {
 
 export async function exists(loc: PathLike) {
   return existsSync(loc);
+}
+
+/**
+ * Makes a new directory and returns its path.
+ * @param loc The location to make the directory.
+ * @param dirName Optional name of the directory to create. If not defined the location will be used.
+ */
+export async function makeDir(loc: PathLike, dirName?: string) {
+  const dir = dirName ? join(loc.toString(), dirName) : loc;
+  mkdirSync(dir);
+  return dir;
+}
+
+/**
+ * Removes a directory and returns the resulting location.
+ * @param loc The location of the directory to remove.
+ * @param dirName Optional name of the directory to remove. If not defined the location will be used.
+ */
+export async function removeDir(loc: PathLike, dirName?: string) {
+  const dir = dirName ? join(loc.toString(), dirName) : loc.toString();
+  if (await exists(dir)) {
+    rmdirSync(dir);
+    return dir.split('/').slice(0, -1).join('/');
+  } else {
+    throw new Error(`Cannot Remove Directory: Directory does not exist: ${dir}`);
+  }
 }
 
 /**

@@ -8,17 +8,17 @@
 
 **Supported Filetypes**
 
-[x] XLSX
-[x] XML
-[x] JSON
-[x] CSV
-[ ] YAML
-[ ] Markdown
+- [x] XLSX
+- [x] XML
+- [x] JSON
+- [x] CSV
+- [ ] YAML
+- [ ] Markdown
 
 **Features**
 
-[ ] Directory Traversal
-[ ] Packaging & Compression
+- [ ] Directory Traversal
+- [ ] Packaging & Compression
 
 ## Installation
 

@@ -10,12 +10,13 @@
 // import { writeFileSync, writeSync } from 'fs';
 import { join } from 'path';
 import { Element } from 'xml-js';
-import { importXML, exportXML, importJSON, exportJSON } from '../file';
+import { makeDir, removeDir, importXML, exportXML, importJSON, exportJSON, exists } from '../file';
 
 /**
  # Constants
  */
 
+const TEST_DIR = join(__dirname, '../../data/tests/dir');
 const IMPORT_DIR = join(__dirname, '../../data/tests/import');
 const EXPORT_DIR = join(__dirname, '../../data/tests/export');
 
@@ -42,6 +43,20 @@ function getDirs(name: string, outName = name, outDir = EXPORT_DIR, inDir = IMPO
  # Tests
  */
 try {
+  describe('[FL] Directory Utilities', () => {
+    const dirName = 'test_dir';
+    const createLoc = join(TEST_DIR, dirName);
+    it('can create directories', async () => {
+      const createLoc = await makeDir(TEST_DIR, dirName);
+      expect(await exists(createLoc)).toBe(true);
+    });
+    it('can remove directories', async () => {
+      const rmLoc = await removeDir(TEST_DIR, dirName);
+      expect(await exists(createLoc)).toBe(false);
+      expect(rmLoc).toBe(TEST_DIR);
+    });
+  });
+
   describe('[FL] XML File Loader', () => {
     const { inDir, outDir } = getDirs('u1', 'fl_u1');
     it('can load XML files', async () => {
@@ -50,10 +65,12 @@ try {
     it('can export XML files', async () => {
       const xml: Element = await importXML(inDir.XML);
       await exportXML(join(outDir.rawXML), xml);
+      expect(await exists(outDir.rawXML)).toBe(true);
     });
     it('can export JSON files', async () => {
       const xml: Element = await importXML(inDir.XML);
       await exportJSON(outDir.rawJSON, xml, true);
+      expect(await exists(outDir.rawJSON)).toBe(true);
     });
   });
 } catch (err) {
